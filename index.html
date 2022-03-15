@@ -324,47 +324,6 @@
 	button.addEventListener("click", function(e) {
 		   Swal.fire(button.value);
 	});
-	
-	
-	//window.addEventListener("load", checkCookie,false);
-	
-	function checkCookie() {
-		var myCookie = getCookie("username");
-		
-		if (myCookie == null) {
-			Swal.fire({
-				title: "Heeeelloooo Aaa .. ummm~?",
-				text: "plz insert your name or nickname",
-				input: 'text',
-				showCancelButton: true        
-			}).then((result) => {
-				if (result.value) {
-					document.cookie = "username="+result.value+";";
-				}
-			});
-		}
-		else {
-			Swal.fire("Helloo Agin " + myCookie);
-		}
-	}
-	
-	function getCookie(name) {
-		var cookie = document.cookie;
-		var prefix = name + "=";
-		var begin = cookie.indexOf(";" + prefix);
-		if (begin == -1) {
-			begin = cookie.indexOf(prefix);
-			if (begin != 0) return null;
-		} else {
-			begin += 2;
-			var end = document.cookie.indexOf(";", begin);
-			if (end == -1) {
-			end = cookie.length;
-			}
-		}
-		return unescape(cookie.substring(begin + prefix.length, end));
-	} 
-	
 </script>	
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
