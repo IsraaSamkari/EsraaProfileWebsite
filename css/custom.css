@@ -52,3 +52,11 @@ button.abbrev { background:none; border:none; }
   text-align: justify;
   text-justify: inter-word;
 }
+
+.cookie { 
+    display: none; 
+}
+
+body:not(.cookieconsent) .cookie {
+    display: block;
+}
