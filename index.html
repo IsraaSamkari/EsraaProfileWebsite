@@ -324,5 +324,45 @@
 	button.addEventListener("click", function(e) {
 		   Swal.fire(button.value);
 	});
+	
+	
+	window.addEventListener("load", checkCookie,false);
+	function checkCookie() {
+		var myCookie = getCookie("username");
+		
+		alert(myCookie);
+		if (myCookie == null) {
+			Swal.fire({
+				title: "Heeeelloooo Aaa .. ummm~?",
+				text: "plz insert your name or nickname",
+				input: 'text',
+				showCancelButton: true        
+			}).then((result) => {
+				if (result.value) {
+					document.cookie = "username="+result.value.toUTCString()+";";
+				}
+			});
+		}
+		else {
+			Swal.fire("Helloo Agin " + myCookie);
+		}
+	}
+	
+	function getCookie(cname) {
+	  let name = cname + "=";
+	  let decodedCookie = decodeURIComponent(document.cookie);
+	  let ca = decodedCookie.split(';');
+	  for(let i = 0; i <ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+		  c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+		  return c.substring(name.length, c.length);
+		}
+	  }
+	  return null;
+	}
+	
 </script>	
 </html>
