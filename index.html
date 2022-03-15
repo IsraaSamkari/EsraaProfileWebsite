@@ -310,11 +310,11 @@
 </body>
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.17.6/dist/sweetalert2.all.js"></script>
 <script >
 	var button = document.getElementById("text-clicked");
 	button.addEventListener("click", function(e) {
-		  alert(button.value);
+		   Swal.fire(button.value);
 	});
 </script>	
 </html>
