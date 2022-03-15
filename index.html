@@ -324,53 +324,66 @@
 	button.addEventListener("click", function(e) {
 		   Swal.fire(button.value);
 	});
+	
+	
+	//window.addEventListener("load", checkCookie,false);
+	
+	function checkCookie() {
+		var myCookie = getCookie("username");
+		
+		if (myCookie == null) {
+			Swal.fire({
+				title: "Heeeelloooo Aaa .. ummm~?",
+				text: "plz insert your name or nickname",
+				input: 'text',
+				showCancelButton: true        
+			}).then((result) => {
+				if (result.value) {
+					document.cookie = "username="+result.value+";";
+				}
+			});
+		}
+		else {
+			Swal.fire("Helloo Agin " + myCookie);
+		}
+	}
+	
+	function getCookie(name) {
+		var cookie = document.cookie;
+		var prefix = name + "=";
+		var begin = cookie.indexOf(";" + prefix);
+		if (begin == -1) {
+			begin = cookie.indexOf(prefix);
+			if (begin != 0) return null;
+		} else {
+			begin += 2;
+			var end = document.cookie.indexOf(";", begin);
+			if (end == -1) {
+			end = cookie.length;
+			}
+		}
+		return unescape(cookie.substring(begin + prefix.length, end));
+	} 
+	
 </script>	
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
-
-	window.addEventListener("load", checkCookie,false);
-
-	function checkCookie() {
-		var myCookie = getCookie("cookieconsent");
-		if(myCookie == null){
-			window.cookieconsent.initialise({
-			container: document.getElementById("content"),
-			palette:{
-			 popup: {background: "#3c404d"},
-			 button: {background: "#8bed4f"},
-			},
-			revokable:true,
-			onStatusChange: function(status) {
-			 if(!this.hasConsented()){
-				document.cookie ="cookieconsent=ok;";
-			 }
-			},
-			law: {
-			 regionalLaw: false,
-			},
-			location: true,
-		   });
-		}else{
-			alert("hello");
-		}	
-			
-	}
-
-	function getCookie(cname) {
-	  let name = cname + "=";
-	  let ca = document.cookie.split(';');
-	  for(let i = 0; i < ca.length; i++) {
-		let c = ca[i];
-		while (c.charAt(0) == ' ') {
-		  c = c.substring(1);
-		}
-		if (c.indexOf(name) == 0) {
-		  return c.substring(name.length, c.length);
-		}
-	  }
-	  return null;
-	}
-   
+   window.cookieconsent.initialise({
+    container: document.getElementById("content"),
+    palette:{
+     popup: {background: "#3c404d"},
+     button: {background: "#8bed4f"},
+    },
+    revokable:true,
+    onStatusChange: function(status) {
+     console.log(this.hasConsented() ?
+      'enable cookies' : 'disable cookies');
+    },
+    law: {
+     regionalLaw: false,
+    },
+    location: true,
+   });
   </script>
 </script>
 </html>
