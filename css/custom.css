@@ -35,11 +35,6 @@ a {
 	text-decoration: none;
 }
 
-.panel-height {
-  height: 100px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
 
 .checked {
   color: orange;
