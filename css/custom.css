@@ -68,3 +68,22 @@ button.abbrev { background:none; border:none; }
 body:not(.cookieconsent) .cookie {
     display: block;
 }
+
+.lang-btn {
+  background-color: gray; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: transform 1s;
+}
+
+.lang-btn:hover{
+	transition: transform 0.5s;
+	transform: scale(0.95);
+}
+
+.lang-btn:active{
+	background-color: #4CAF50;
+}
