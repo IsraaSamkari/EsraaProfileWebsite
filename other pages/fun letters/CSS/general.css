@@ -1,0 +1,213 @@
+.header {
+  display: inline;
+  position: fixed;
+  z-index: 2;
+  top: -5%;
+  left: 0;
+  width: 100%;
+  padding-top: 1.7%;
+  background-color: black;
+  text-align: center;
+  opacity: 0.7;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.settingIcon {
+	display: inline-block;
+	padding-top: 2.5%;
+	padding-left: 2%;
+	float: left;
+	width: 5%;
+}
+.soundIcon{
+	display: inline-block;
+	padding-top: 2.5%;
+	padding-left: 2%;
+	float: left;
+	width: 5%;
+   cursor: pointer;
+}
+.soundIcon:hover{
+	animation: growOnce 0.5s linear normal;
+	animation-fill-mode: forwards;
+}
+.soundIcon:active{
+	animation: shrinkOnce 0.5s linear normal;
+	animation-fill-mode: forwards;
+}
+.homeIcon{
+	display: inline-block;
+	padding-top: 2.5%;
+	padding-left: 1%;
+	float: center;
+	width: 3%;
+}
+.learnText {
+  display: inline-block;
+  padding-top: 2%;
+  color: white;
+  font-size: 40px;
+}
+.gamesIcon {
+	display: inline-block;
+	padding-top: 1%;
+	padding-right: 3%;
+	float: right;
+	width: 7%;
+}
+.settingIcon:hover {
+	animation: rotateClockwise 2s linear infinite normal;
+}
+.homeIcon:hover{
+	animation: growing 0.5s ease-in-out infinite;
+}
+.gamesIcon:hover {
+    animation: breathing 2.5s linear infinite normal;
+}
+@keyframes rotateClockwise{
+	0% {
+	-ms-transform-origin: 66% 66%;
+	transform-origin: 66% 66%;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+	-ms-transform-origin: 66% 66%;
+	transform-origin: 66% 66%;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+	-ms-transform-origin: 66% 66%;
+	transform-origin: 66% 66%;
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  
+  25% {
+	-webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  50% {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  
+  75% {
+	-webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes growOnce {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  
+  25%, 100% {
+	-webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+@keyframes shrinkOnce {
+  0% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  
+  25%, 100% {
+	-webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes rotatOnce{
+	0% {
+	-ms-transform-origin: 66% 66%;
+	transform-origin: 66% 66%;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  
+  50%,100% {
+	-ms-transform-origin: 66% 66%;
+	transform-origin: 66% 66%;
+    -webkit-transform: rotateY(30deg);
+    -ms-transform: rotateY(30deg);
+    transform: rotateY(30deg);
+  }
+}
+
+footer {
+  display: block;
+  margin: 0;
+  padding-top: 0.5%;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  height: 8%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.icon {
+	width: 2%;
+	height: 50%;
+	margin-right: 0.5%;
+	margin-left: 0.5%;
+	margin-bottom: -1%;
+}
+.textCopyright{font-size:15px!important}
+
+@keyframes growing{
+	 0%, 100% {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	  }
+
+	 50% {
+		-webkit-transform: scale(1.02);
+		-ms-transform: scale(1.02);
+		transform: scale(1.02);
+	  }
+}
+
+
+
+

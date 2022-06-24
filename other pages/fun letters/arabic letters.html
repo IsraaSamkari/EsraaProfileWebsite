@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+
+<html>
+	<header>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>الحروف العربية</title>
+		<!-- add icon link -->
+		<link rel = "icon" href = "Images/Logo/letter-e.png" type = "image/png"> 
+		<link rel="stylesheet" href="CSS/general.css">
+		<link rel="stylesheet" href="CSS/numbers.css">
+	</header>
+	
+	<body onload="init()" class="noselect">
+	<!-- Header -->
+		<div class="header">
+		  <h1  class="learnText">الحروف العربية</h1>
+		  <a href="index.html">
+			<img src="Images/Logo/home.svg" class="homeIcon" alt="الصفحة الرئيسية" />
+		  </a>
+		</div>
+		
+	<!-- Container -->
+		<div class="container">
+
+		<!-- Numbers bar -->		
+			<div id="main">
+			  <div id="main2">
+				<div id="navMenu">
+				  <div id="navMenu-wrapper">
+					<ul id="navMenu-items">
+					  <div id="menuSelector"></div>
+					  <!-- Print button numbers from 1 to 100 -->
+						<script>
+						console.log("\u0600");
+							for (i = 1; i <= 28; i++) {
+								if(i==1 || i==28){
+									document.write("<li class='navMenu-item active'>" +
+													"<a id='"+i+"' onclick='changeImages("+i+")'>"+i+"</a></li>");
+								}else{
+									document.write("<li class='navMenu-item'>" +
+													"<a id='"+i+"' onclick='changeImages("+i+")'>"+i+"</a></li>");
+								}
+							}
+						</script>
+					</ul>
+					<div class="navMenu-paddles">
+					  <a class="navMenu-paddle-left icon-chevronleft" aria-hidden="true"> </a>
+					  <a class="navMenu-paddle-right icon-chevronright" aria-hidden="true"> </a>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		<!-- jQuaery about controls and animation -->	
+			<script type = "text/javascript" src = "JavaScripts/jquery-1.12.0.min.js"></script>
+			<script type = "text/javascript" src = "JavaScripts/jquery-ui.min.js"></script>
+
+		<!-- Bar number animation -->
+			<script>
+			$(function() {
+			  var items = $('#navMenu-items').width();
+			  var itemSelected = document.getElementsByClassName('navMenu-item');
+			  navPointerScroll($(itemSelected));
+			  $("#navMenu-items").scrollLeft(-200).delay(200).animate({
+				scrollLeft: "+=200"
+			  }, 1000, "easeOutQuad");
+			 
+				$('.navMenu-paddle-right').click(function () {
+					$("#navMenu-items").animate({
+						scrollLeft: '+='+items
+					});
+				});
+				$('.navMenu-paddle-left').click(function () {
+					$( "#navMenu-items" ).animate({
+						scrollLeft: "-="+items
+					});
+				});
+
+			  $('.navMenu-item').click(function () {
+					$('#navMenu').find('.active').removeClass('active');
+					$(this).addClass("active");
+					navPointerScroll($(this));
+				});
+
+			});
+
+			function navPointerScroll(ele) {
+				var parentScroll = $("#navMenu-items").scrollLeft();
+				parentScroll -= $('#navMenu-items').width();
+				
+				var offset = ($(ele).offset().left - $('#navMenu-items').offset().left);
+				var totalelement = offset + $(ele).outerWidth()/2;
+
+				var rt = (($(ele).offset().left) - ($('#navMenu-wrapper').offset().left) + ($(ele).outerWidth())/2);
+				$('#menuSelector').animate({
+					left: totalelement + parentScroll
+				})
+			}
+			</script>
+
+			
+		<!-- Three images -->
+			<div class="row" style="visibility: hidden;">
+			  <div class="column">
+			  <!-- Drawing canvas with colors and eraser -->
+				<canvas id="drawing" width="355" height="200"></canvas>
+				<div style="border:1px solid;position:absolute;top:91%;left:30%;width:20px;height:20px;background:green;" id="green" onclick="color(this)"></div>
+				<div style="border:1px solid;position:absolute;top:91%;left:18%;width:20px;height:20px;background:blue;" id="blue" onclick="color(this)"></div>
+				<div style="border:1px solid;position:absolute;top:91%;left:24%;width:20px;height:20px;background:red;" id="red" onclick="color(this)"></div>
+				<div style="border:1px solid;position:absolute;top:91%;left:27%;width:20px;height:20px;background:yellow;" id="yellow" onclick="color(this)"></div>
+				<div style="border:1px solid;position:absolute;top:91%;left:15%;width:20px;height:20px;background:orange;" id="orange" onclick="color(this)"></div>
+				<div style="border:1px solid;position:absolute;top:91%;left:21%;width:20px;height:20px;background:black;" id="black" onclick="color(this)"></div>
+				<img class="eraser" width="50" height="50" src="Images/Logo/eraser.png" value="clear" id="clr" size="23" 
+					onclick="erase()" style="position:absolute;top:89%;left:4%;">
+				<img class="eye" width="50" height="50" src="Images/Logo/hide.png" id="displayIcon" size="23" 
+					onclick="showDasheImage()" style="position:absolute;top:89%;left:9%;">
+			  </div>
+			  <div class="column">
+				<img id="dynamicImage" src="Images/Arabic letters/Dynamic images/Dash images/1.png" 
+					 onmouseover="hoverDynamicImage(this)" onmouseout="outDynamicImage(this)"/>
+			  </div>
+			  <div class="column" >
+				<img id="staticImage" src="Images/Arabic letters/Static images/PNG images/1.png" 
+					 onmouseover="hoverStaticImage(this)" onmouseout="outStaticImage(this)"/>
+			  </div>
+			</div>
+		</div>
+		
+	<!-- Draw canvas -->
+	<script type="text/javascript">
+    var canvas, boundings,ctx, flag = false,
+        prevX = 0,
+        currX = 0,
+        prevY = 0,
+        currY = 0,
+        dot_flag = false;
+		
+		
+    var x = "black",
+        y = 2;
+    
+    function init() {
+        canvas = document.getElementById('drawing');
+        ctx = canvas.getContext("2d");
+		boundings = canvas.getBoundingClientRect();
+		
+        canvas.addEventListener("mousemove", function (e) {
+            findxy('move', e)
+        }, false);
+        canvas.addEventListener("mousedown", function (e) {
+            findxy('down', e)
+        }, false);
+        canvas.addEventListener("mouseup", function (e) {
+            findxy('up', e)
+        }, false);
+        canvas.addEventListener("mouseout", function (e) {
+            findxy('out', e)
+        }, false);
+    }
+    
+	function findxy(res, e) {
+        if (res == 'down') {
+            setMouseCoordinates(e);
+    
+            flag = true;
+            dot_flag = true;
+            if (dot_flag) {
+                ctx.beginPath();
+                ctx.fillStyle = x;
+                ctx.fillRect(currX, currY, 2, 2);
+                ctx.closePath();
+                dot_flag = false;
+            }
+        }
+        if (res == 'up' || res == "out") {
+            flag = false;
+        }
+        if (res == 'move') {
+            if (flag) {
+                setMouseCoordinates(e);
+                draw();
+            }
+        }
+    }
+	
+	function setMouseCoordinates(e) {
+		prevX = currX;
+		prevY = currY;
+		currX = e.clientX - boundings.left;
+		currY = e.clientY - boundings.top;
+		
+	}
+	function draw() {
+        ctx.beginPath();
+        ctx.moveTo(prevX, prevY);
+        ctx.lineTo(currX, currY);
+        ctx.strokeStyle = x;
+        ctx.lineWidth = 14;
+		ctx.lineCap = 'round';
+        ctx.stroke();
+        ctx.closePath();
+    }
+    
+    function color(obj) {
+		var currentSoundEffect = new Audio("Sounds/Effects/pick color.ogg");
+			currentSoundEffect.play();
+			
+        switch (obj.id) {
+            case "green":
+                x = "green";
+                break;
+            case "blue":
+                x = "blue";
+                break;
+            case "red":
+                x = "red";
+                break;
+            case "yellow":
+                x = "yellow";
+                break;
+            case "orange":
+                x = "orange";
+                break;
+            case "black":
+                x = "black";
+                break;
+            case "white":
+                x = "white";
+                break;
+        }
+        if (x == "white") y = 14;
+        else y = 2;
+    
+    }
+    
+    function erase() {
+		var currentSoundEffect = new Audio("Sounds/Effects/wipe.ogg");
+			currentSoundEffect.play();
+			
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    
+    
+    </script>
+    
+	<!-- Capture every event that related to three images -->
+		<script>
+			// Declare a loop variable
+			var i;
+			var currentNumber =1;
+			var displayImage = true;
+			
+			// display or remove dashe image as background in drawing panel
+			function showDasheImage(){
+				if(displayImage){
+					var drawingNumber = "Images/Arabic letters/Drawing images/"+currentNumber+".png";
+					document.getElementById("displayIcon").src = "Images/Logo/display.png";
+					
+					displayImage = false;
+				}else{
+					var drawingNumber = "Images/Arabic letters/Drawing images/empty.png";
+					document.getElementById("displayIcon").src = "Images/Logo/hide.png";
+					
+					displayImage = true;
+				}
+				
+				document.getElementById("drawing").style.backgroundImage = "url('"+drawingNumber+"')";
+				
+				var currentSoundEffect = new Audio("Sounds/Effects/select.ogg");
+					currentSoundEffect.play();
+			}
+			
+			// Change all three images based on the number that the user has clicked
+			function changeImages(elementText) {
+				document.getElementsByClassName("row")[0].style.visibility = "visible";
+				
+				var number = parseInt(elementText);
+				document.getElementById("staticImage").src = "Images/Arabic letters/Static images/PNG images/"+number+".png";
+				document.getElementById("dynamicImage").src = "Images/Arabic letters/Dynamic images/Dash images/"+number+".png";
+				
+				// hidden by default
+				var drawingNumber = "Images/Arabic letters/Drawing images/empty.png";
+				document.getElementById("drawing").style.backgroundImage = "url('"+drawingNumber+"')";
+				document.getElementById("displayIcon").src = "Images/Logo/hide.png";
+				displayImage = true;
+				
+				currentNumber = number;
+				
+				var currentSoundEffect = new Audio("Sounds/Effects/click.ogg");
+					currentSoundEffect.play();
+			}
+			
+			// Change image and sound when mouse hover
+			var currentSoundNumber;
+			function hoverStaticImage(staticImage)
+			{
+				if(currentSoundNumber == null){
+					currentSoundNumber = new Audio("Sounds/Arabic letters/"+currentNumber+".mp3");
+					currentSoundNumber.play();
+				}else if(!currentSoundNumber.paused) {
+					currentSoundNumber.pause();
+					currentSoundNumber.currentTime = 0;
+				}
+				
+				currentSoundNumber = new Audio("Sounds/Arabic letters/"+currentNumber+".mp3");
+				currentSoundNumber.play();
+				
+				staticImage.src = "Images/Arabic letters/Static images/Hover images/"+currentNumber+".png";
+				
+			}
+			
+			function hoverDynamicImage(dynamicImage)
+			{
+				dynamicImage.src = "Images/Arabic letters/Dynamic images/GIF images/"+currentNumber+".gif";
+			}
+			
+			// Change image when mouse out of the fram
+			function outStaticImage(staticImage)
+			{
+				staticImage.src = "Images/Arabic letters/Static images/PNG images/"+currentNumber+".png";
+			}
+			function outDynamicImage(dynamicImage)
+			{
+				dynamicImage.src = "Images/Arabic letters/Dynamic images/Dash images/"+currentNumber+".png";
+			}
+			</script>
+			
+	<!-- Change to arabic letters -->
+		<script>
+				var arabicLetters = ['\u0623','\u0628','\u062A','\u062B','\u062C',
+									 '\u062D','\u062E','\u062F','\u0630','\u0631',
+									 '\u0632','\u0633','\u0634','\u0635','\u0636',
+									 '\u0637','\u0638','\u0639','\u063A','\u0641',
+									 '\u0642','\u0643','\u0644','\u0645','\u0646',
+									 '\u06BE','\u0648','\u064A'];
+				
+				for (i = 1; i <= 28; i++){
+					document.getElementById(""+i+"").innerHTML = arabicLetters[i-1];
+				}	
+		</script>
+	
+	
+	</body>
+</html>
+
