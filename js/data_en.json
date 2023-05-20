@@ -1,0 +1,170 @@
+{ 
+	"header": {
+		"title": "ES profile", 
+		"name": "Esraa Samkari",
+		"state": "Studying master of computer science at Umm Al-Qura University",
+		"sections": ["About me", "Education", "Experience", "Projects", "Skils"]
+	},
+	"aboutSec":{
+		"about": "About me",
+		"subName_1": "Who am I?",
+		"subName_2": "My news", 
+		"discription": "You can call me a geek, who spends most of her time in front of a computer doing a lot of projects including making a 3D film, creating video games, building different websites and apps under the requirement, playing around with OpenGL, and investigating the game engines. In addition to my interest in social participation."
+	},
+	"eduSec":{
+		"title": "EDUCATION",
+		"MainDiv": [
+			{
+				"Header":"Master Degree - ???",
+				"Body":"Computer Science from Umm Al-Qura University, Makkah, Saudi Arabia."
+			},
+			{
+				"Header":"Bachelor's Degree - 2019",
+				"Body":"Computer Science from Umm Al-Qura University, Makkah, Saudi Arabia."
+			},
+			{
+				"Header":"High School Degree - 2014",
+				"Body":"School 16 in Al Hamra, Makkah, Saudi Arabia."
+			}
+		]
+	},
+	"expSec":{
+		"title": "EXPERIENCE",
+		"MainDiv": [
+			{
+				"Header":"Volunteer - 2023",
+				"Body":"An introduction course to web development at the College of Technology for Girls in Makkah."
+			},{
+				"Header":"Participation in the conference - 2022",
+				"Body":"Contribute to the publication of a scientific paper in data analysis."
+			},{
+				"Header":"Volunteer - 2022",
+				"Body":"Participating in Tech Trip event as Google Saudi Community member."
+			},{
+				"Header":"Teacher - 2020",
+				"Body":"Teaching computer for primary in Al-batool school, Makkah."
+			},{
+				"Header":"Trainer - 3 years",
+				"Body":"Giving courses in 3D design using Blender from 2016 to 2019."
+			}
+		]
+	},
+	"projSec":{
+		"title": "PROJECTS",
+		"MainDiv": [
+			{
+				"Header":"2022",
+				"Body":[
+					{
+						"item": "♦ Publishing 3 research.",
+						"link": "https://scholar.google.com/citations?hl=ar&user=87Rihi0AAAAJ"
+					},{
+						"item": "♦ Building 2 video games.",
+						"link": "https://esgames.itch.io/"
+					},{
+						"item": "♦ Developing App for CS terminology in Arabic.",
+						"link": "https://www.artechterms.info/#top"
+					}
+				]
+			},{
+				"Header":"2021",
+				"Body":[
+					{
+						"item": "♦ Building 4 video games.",
+						"link": "https://esgames.itch.io/"
+					}
+				]
+			},{
+				"Header":"2020",
+				"Body":[
+					{
+						"item": "♦ Developing Letters app.",
+						"link": "https://play.google.com/store/apps/details?id=com.t4g.fun_letters"
+					},{
+						"item": "♦ Developing Numbers app.",
+						"link": "https://play.google.com/store/apps/details?id=com.t4g.learning_letters_numbers"
+					},{
+						"item": "♦ Developing Letters webpage.",
+						"link": "other pages/fun letters/index.html"
+					},{
+						"item": "♦ Developing Numbers webpage.",
+						"link": "other pages/fun numbers/index.html"
+					},{
+						"item": "♦ Building Attendance webpage.",
+						"link": "other pages/attendees.html"
+					}
+				]
+			},{
+				"Header":"2019",
+				"Body":[
+					{
+						"item": "♦ Building Textlexai app (under fixing).",
+						"link": ""
+					},{
+						"item": "♦ Writing a book Blender 2.80.",
+						"link": "https://drive.google.com/drive/folders/1UYKcL1w3dqI0KNBRe1jKSj6ZqT6tvUHO?usp=sharing"
+					}
+				]
+			},{
+				"Header":"2018",
+				"Body":[
+					{
+						"item": "♦ Building Guide Me website (under fixing).",
+						"link": ""
+					},{
+						"item": "♦ Writing a book Blender 2.79.",
+						"link": "https://drive.google.com/drive/folders/1nh0VREwPIvNx1Y7Yvvc1-0biHX9KbGLF?usp=sharing"
+					}
+				]
+			},{
+				"Header":"2014 - present",
+				"Body":[
+					{
+						"item": "♦ Small projects in Blender.",
+						"link": "https://drive.google.com/drive/folders/1hSRgQPG7U47pNIHnbY4E87hjnbGJd4ch?usp=sharing"
+					}
+				]
+			}
+		]
+	},
+	"skillSec":{
+		"title": "SKILLS",
+		"MainDiv": [
+			{
+				"Header":"Soft skills",
+				"Body":[
+					{
+						"item": "Time keeping",
+						"stars": 4
+					},{
+						"item": "Talking",
+						"stars": 5
+					},{
+						"item": "Motivation",
+						"stars": 5
+					},{
+						"item": "Analysis",
+						"stars": 5
+					}   
+				]
+			},{
+				"Header":"Hard skills",
+				"Body":[
+					{
+						"item": "Unity",
+						"stars": 5
+					},{
+						"item": "Unreal 4",
+						"stars": 3
+					},{
+						"item": "Clip studio",
+						"stars": 5
+					},{
+						"item": "Blender",
+						"stars": 5
+					}   
+				]
+			}
+		]
+	}
+}

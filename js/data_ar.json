@@ -1,0 +1,170 @@
+{
+    "header": {
+		"title": "الملف الشخصي ES",
+		"name": "إسراء سمكري",
+		"state": "طالبة ماجستير علوم الحاسب الآلي بجامعة أم القرى",
+		"sections": ["نبذة عني", "التعليم", "الخبرات", "المشاريع", "المهارات"]
+    },
+	"aboutSec":{
+		"about": "نبذة عني",
+		"subName_1": "من أنا؟",
+		"subName_2": "أخر أخباري", 
+		"discription": "يمكنك مناداتي بالمهوسة ، حيث أقضي معظم وقتي أمام الحاسوب. قمت بتطبيق عدة مشاريع برمجية متنوعة، منها: تطوير المواقع، التطبيقات، الألعاب، برامج الكمبيوتر، الأمن السبراني، الذكاء الاصطناعي، تعلم الآلة، التعلم العميق والتصميم الثلاثي الابعاد. أضف إلى ذلك اهتماماتي بالجانب الاجتماعي مثل المشاركة في إلقاء دورات تقنية متنوعة وتأليف الكتب."
+	},
+	"eduSec":{
+		"title": "التعليم",
+		"MainDiv": [
+			{
+				"Header":"الماجستير - ؟؟؟",
+				"Body":"علوم الحاسب الآلي من جامعة أم القرى ، مكة المكرمة ، المملكة العربية السعودية."
+			},
+			{
+				"Header":"البكالوريوس - 2019",
+				"Body":"علوم الحاسب الآلي من جامعة أم القرى ، مكة المكرمة ، المملكة العربية السعودية."
+			},
+			{
+				"Header":"الثانوي - 2014",
+				"Body":"المدرسة السادسة عشرة، مكة المكرمة، المملكة العربية السعودية."
+			}
+		]
+	},
+	"expSec":{
+		"title": "الخبرات",
+		"MainDiv": [
+			{
+				"Header":"تطوع - 2023",
+				"Body":"إلقاء دورة مقدمة في تطوير مواقع الويب في كلية التقنية للبنات بمكة."
+			},{
+				"Header":"المشاركة في مؤتمر - 2022",
+				"Body":"المساهمة في نشر ورقة علمية تتحدث عن تحليل البيانات لحدث ترفيهي مقام في الرياض."
+			},{
+				"Header":"تطوع - 2022",
+				"Body":"المشاركة في حدث Tech Trip كعضوة في مجتمع قوقل السعودي."
+			},{
+				"Header":"معلمة - 2020",
+				"Body":"تدريس مادة الحاسب الآلي للمرحلة الابتدائية بمدرسة البتول بمكة المكرمة."
+			},{
+				"Header":"مدربة - 3 سنوات",
+				"Body":"إعطاء دورات في التصميم ثلاثي الأبعاد باستخدام Blender من عام 2016 إلى 2019."
+			}
+		]
+	},
+	"projSec":{
+		"title": "المشاريع",
+		"MainDiv": [
+			{
+				"Header":"2022",
+				"Body":[
+					{
+						"item": "♦ نشر 3 أبحاث.",
+						"link": "https://scholar.google.com/citations?hl=ar&user=87Rihi0AAAAJ"
+					},{
+						"item": "♦ تطوير لعبتين إلكترونيتين.",
+						"link": "https://esgames.itch.io/"
+					},{
+						"item": "♦ تطوير تطبيق يختص بجمع مصطلحات الحاسب.",
+						"link": "https://www.artechterms.info/#top"
+					}
+				]
+			},{
+				"Header":"2021",
+				"Body":[
+					{
+						"item": "♦ تطوير 4 ألعاب إلكترونية.",
+						"link": "https://esgames.itch.io/"
+					}
+				]
+			},{
+				"Header":"2020",
+				"Body":[
+					{
+						"item": "♦ تطوير تطبيق الحروف.",
+						"link": "https://play.google.com/store/apps/details?id=com.t4g.fun_letters"
+					},{
+						"item": "♦ تطوير تطبيق الأرقام.",
+						"link": "https://play.google.com/store/apps/details?id=com.t4g.learning_letters_numbers"
+					},{
+						"item": "♦ تطوير صفحة ويب للحروف.",
+						"link": "other pages/fun letters/index.html"
+					},{
+						"item": "♦ تطوير صفحة ويب للأرقام.",
+						"link": "other pages/fun numbers/index.html"
+					},{
+						"item": "♦ تطوير صفحة لحصر الحضور .",
+						"link": "other pages/attendees.html"
+					}
+				]
+			},{
+				"Header":"2019",
+				"Body":[
+					{
+						"item": "♦ إنشاء تطبيق Textlexai (تحت الإصلاح).",
+						"link": ""
+					},{
+						"item": "♦ تأليف كتاب Blender 2.80.",
+						"link": "https://drive.google.com/drive/folders/1UYKcL1w3dqI0KNBRe1jKSj6ZqT6tvUHO?usp=sharing"
+					}
+				]
+			},{
+				"Header":"2018",
+				"Body":[
+					{
+						"item": "♦ إنشاء موقع Guide Me (تحت الإصلاح).",
+						"link": ""
+					},{
+						"item": "♦ تأليف كتاب Blender 2.79.",
+						"link": "https://drive.google.com/drive/folders/1nh0VREwPIvNx1Y7Yvvc1-0biHX9KbGLF?usp=sharing"
+					}
+				]
+			},{
+				"Header":"2014 - للحاضر",
+				"Body":[
+					{
+						"item": "♦ مشاريع صغيرة ببرنامج Blender.",
+						"link": "https://drive.google.com/drive/folders/1hSRgQPG7U47pNIHnbY4E87hjnbGJd4ch?usp=sharing"
+					}
+				]
+			}
+		]
+	},
+	"skillSec":{
+		"title": "المهارات",
+		"MainDiv": [
+			{
+				"Header":"المهارات الشخصية",
+				"Body":[
+					{
+						"item": "الإلتزام بالوقت",
+						"stars": 4
+					},{
+						"item": "التحدث",
+						"stars": 5
+					},{
+						"item": "الحماس",
+						"stars": 5
+					},{
+						"item": "التحليل",
+						"stars": 5
+					}   
+				]
+			},{
+				"Header":"المهارات التقنية",
+				"Body":[
+					{
+						"item": "Unity",
+						"stars": 5
+					},{
+						"item": "Unreal 4",
+						"stars": 3
+					},{
+						"item": "Clip studio",
+						"stars": 5
+					},{
+						"item": "Blender",
+						"stars": 5
+					}   
+				]
+			}
+		]
+	}
+}
