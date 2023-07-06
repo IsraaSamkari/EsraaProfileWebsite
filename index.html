@@ -23,46 +23,9 @@
 </head>
 
 <body class="bg-light text-dark">
-	<!-- Header -->
-	<div id="home" class="container mb-1 bg-dark text-light text-center rounded">
-		<div class="row justify-content-around">
-			<div class="col-sm-3 text-white align-self-center" style="width: 15%;">
-				<img src="images/ES_icon.png" class="img-fluid">
-			</div>
-			<div class="col-sm-7 align-self-center">
-				<div class="row ">
-					<h1 class="display-2" id="name">إسراء سمكري</h1>
-					<p><i id="state" style="color:rgb(203, 216, 221);">طالبة ماجستير علوم الحاسب الآلي بجامعة أم القرى</i></p>
-				</div>
-			</div>
-			<div class="col-sm-2 align-self-center">
-				<p>
-					التواصل الاجتماعي
-				</p>
-				<div class="col" style="font-size:20px;">
-					<!-- Google Scholar -->
-					<a class=" m-1" href="https://scholar.google.com/citations?hl=ar&user=87Rihi0AAAAJ" target="_blank">
-						<i class="fab fa-google" style="color:rgb(203, 216, 221);"></i>
-					  </a>
-					 <!-- Instagram -->
-					  <a class=" m-1" href="https://www.instagram.com/esraasamkari/" target="_blank">
-						<i class="fab fa-instagram" style="color:rgb(203, 216, 221);"></i>
-					  </a>
-					  <!-- Twitter -->
-					  <a class=" m-1" href="https://twitter.com/EsraaSamkari" target="_blank">
-						<i class="fab fa-twitter" style="color:rgb(203, 216, 221);"></i>
-					  </a>
-					  <!-- itch io -->
-					  <a class=" m-1" href="https://esgames.itch.io/" target="_blank">
-						<i class="fab fa-itch-io" style="color:rgb(203, 216, 221);"></i>
-					  </a>
-				</div>
-			</div>
-		</div>	
-	 </div>
-	 <!-- Header -->
+
 <!-- Nav bar -->
-	<nav class="navbar navbar-expand-sm navbar-dark mb-1 rounded container header" id="myHeader">
+	<nav class=" container navbar navbar-expand-sm navbar-dark" id="myHeader">
 			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#n_bar" aria-controls="navbarNavAltMarkup" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -74,17 +37,39 @@
 					<a class="nav-link" href="#projects">المشاريع</a>
 					<a class="nav-link" href="#skils">المهارات</a>
 				</div>
+				
 			</div>
 			
-			<div>
+			<div class="row-sm-6 align-self-center">
 				<button class="col mx-1 lang-btn" id="ar" onclick="SwappingLanguage(this.id)" style="background-color: #4CAF50;">عربي</button>
 				<button class="col mx-1 lang-btn" id="en" onclick="SwappingLanguage(this.id)">English</button>
 			</div>
 	</nav>	
-<!-- End of Nav bar -->			
+<!-- End of Nav bar -->		
+
+	<!-- Header -->
+	<div id="home" class="container bg-dark text-light text-center ">
+		<div class="row justify-content-around">
+			<div class="col-sm-3 align-self-center">
+			</div>
+
+			<div class="col-sm-6 align-self-center">
+				<div class="row ">
+					<h1 class="display-2" id="name">إسراء سمكري</h1>
+					<p><i id="state" style="color:rgb(203, 216, 221);">طالبة ماجستير علوم الحاسب الآلي بجامعة أم القرى</i></p>
+				</div>
+			</div>
+			
+			<div class="col-sm-3 align-self-center">
+			</div>
+			</div>
+		</div>	
+	 </div>
+	 <!-- Header -->
+	
  
  <!-- Body -->
- <div class="container p-4 my-4" id="BodyOfProfile">
+ <div class="container my-4" id="BodyOfProfile">
 	<!-- About me -->
 	<div class="mb-5">
 		<h2 class="display-4 ps-2 bg-dark text-white" id="about">نبذة عني</h2>
@@ -258,7 +243,24 @@
   <!-- Copyright -->
   <div class="footer-copyright text-center ">
 	© 2022-2023 ES, All Rights Reserved &nbsp; &nbsp; &nbsp; 
+	 <!-- Google Scholar -->
+	<a class=" m-1" href="https://scholar.google.com/citations?hl=ar&user=87Rihi0AAAAJ" target="_blank">
+		<i class="fab fa-google" style="color:rgb(203, 216, 221);"></i>
+	  </a>
+	 <!-- Instagram -->
+	  <a class=" m-1" href="https://www.instagram.com/esraasamkari/" target="_blank">
+		<i class="fab fa-instagram" style="color:rgb(203, 216, 221);"></i>
+	  </a>
+	  <!-- Twitter -->
+	  <a class=" m-1" href="https://twitter.com/EsraaSamkari" target="_blank">
+		<i class="fab fa-twitter" style="color:rgb(203, 216, 221);"></i>
+	  </a>
+	  <!-- itch io -->
+	  <a class=" m-1" href="https://esgames.itch.io/" target="_blank">
+		<i class="fab fa-itch-io" style="color:rgb(203, 216, 221);"></i>
+	  </a>
   </div>
+ 
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
@@ -288,7 +290,7 @@
 		
 		var header = document.getElementById("myHeader");
 		var sticky = header.offsetTop;
-		
+
 		function myFunction() {
 		if (window.pageYOffset > sticky) {
 			header.classList.add("sticky");
