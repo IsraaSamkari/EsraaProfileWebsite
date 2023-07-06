@@ -20,44 +20,69 @@
   gtag('config', 'G-BEXNVB8ZHX');
 </script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-
 </head>
 
 <body class="bg-light text-dark">
-
-<!-- Back to top button -->
-  <a href="#home" id="btn-back-to-top">
-	<i class="fa fa-arrow-circle-up" style="padding:0%;font-size:48px;color:gray"></i>
-  </a>
-<!-- Back to top button -->
- <!-- Header -->
- <div id="home" class="container bg-dark text-light text-center rounded">
-	<div class="row justify-content-between">
-		<div class="col-sm-3 text-white align-self-center">
-			<img src="images/ES_icon.png" class="img-fluid">
-		</div>
-		<div class="col-sm-5 align-self-center">
-			<div class="row">
-				<h1 class="display-2" id="name">إسراء سمكري</h1>
-				<p><i id="state">طالبة ماجستير علوم الحاسب الآلي بجامعة أم القرى</i></p>
-				<p><hr>
-					<button class="col mx-1 lang-btn" id="ar" onclick="SwappingLanguage(this.id)" style="background-color: #4CAF50;">عربي</button>
-					<button class="col mx-1 lang-btn" id="en" onclick="SwappingLanguage(this.id)">English</button>
+	<!-- Header -->
+	<div id="home" class="container mb-1 bg-dark text-light text-center rounded">
+		<div class="row justify-content-around">
+			<div class="col-sm-3 text-white align-self-center" style="width: 15%;">
+				<img src="images/ES_icon.png" class="img-fluid">
+			</div>
+			<div class="col-sm-7 align-self-center">
+				<div class="row ">
+					<h1 class="display-2" id="name">إسراء سمكري</h1>
+					<p><i id="state" style="color:rgb(203, 216, 221);">طالبة ماجستير علوم الحاسب الآلي بجامعة أم القرى</i></p>
+				</div>
+			</div>
+			<div class="col-sm-2 align-self-center">
+				<p>
+					التواصل الاجتماعي
 				</p>
+				<div class="col" style="font-size:20px;">
+					<!-- Google Scholar -->
+					<a class=" m-1" href="https://scholar.google.com/citations?hl=ar&user=87Rihi0AAAAJ" target="_blank">
+						<i class="fab fa-google" style="color:rgb(203, 216, 221);"></i>
+					  </a>
+					 <!-- Instagram -->
+					  <a class=" m-1" href="https://www.instagram.com/esraasamkari/" target="_blank">
+						<i class="fab fa-instagram" style="color:rgb(203, 216, 221);"></i>
+					  </a>
+					  <!-- Twitter -->
+					  <a class=" m-1" href="https://twitter.com/EsraaSamkari" target="_blank">
+						<i class="fab fa-twitter" style="color:rgb(203, 216, 221);"></i>
+					  </a>
+					  <!-- itch io -->
+					  <a class=" m-1" href="https://esgames.itch.io/" target="_blank">
+						<i class="fab fa-itch-io" style="color:rgb(203, 216, 221);"></i>
+					  </a>
+				</div>
 			</div>
-		</div>
-		<div class="col-sm-3 text-white align-self-center">
-			<div class="row nevbar nebbar-link-cus" id="mainSections">
-				<a class="nav-link text-white" href="#about">نبذة عني</a>
-				<a class="nav-link text-white" href="#education">التعليم</a>
-				<a class="nav-link text-white" href="#experience">الخبرات</a>
-				<a class="nav-link text-white" href="#projects">المشاريع</a>
-				<a class="nav-link text-white" href="#skils">المهارات</a>
+		</div>	
+	 </div>
+	 <!-- Header -->
+<!-- Nav bar -->
+	<nav class="navbar navbar-expand-sm navbar-dark mb-1 rounded container header" id="myHeader">
+			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#n_bar" aria-controls="navbarNavAltMarkup" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="n_bar">
+				<div class="navbar-nav" id="mainSections">
+					<a class="nav-link" href="#about">نبذة عني</a>
+					<a class="nav-link" href="#education">التعليم</a>
+					<a class="nav-link" href="#experience">الخبرات</a>
+					<a class="nav-link" href="#projects">المشاريع</a>
+					<a class="nav-link" href="#skils">المهارات</a>
+				</div>
 			</div>
-		</div>
-    </div>	
- </div>
- <!-- Header -->
+			
+			<div>
+				<button class="col mx-1 lang-btn" id="ar" onclick="SwappingLanguage(this.id)" style="background-color: #4CAF50;">عربي</button>
+				<button class="col mx-1 lang-btn" id="en" onclick="SwappingLanguage(this.id)">English</button>
+			</div>
+	</nav>	
+<!-- End of Nav bar -->			
+ 
  <!-- Body -->
  <div class="container p-4 my-4" id="BodyOfProfile">
 	<!-- About me -->
@@ -231,25 +256,9 @@
 <!-- Footer -->
 <footer class="page-footer mt-5 bg-dark text-white font-small blue pt-1" dir="ltr">
   <!-- Copyright -->
-  <div class="footer-copyright text-center ">© 2022 Copyright ES &nbsp; &nbsp; &nbsp; 
-	  <!-- Google Scholar -->
-      <a class=" m-1" href="https://scholar.google.com/citations?hl=ar&user=87Rihi0AAAAJ" target="_blank">
-		<i class="fab fa-google" style="color:white;"></i>
-	  </a>
-	 <!-- Instagram -->
-      <a class=" m-1" href="https://www.instagram.com/esraasamkari/" target="_blank">
-		<i class="fab fa-instagram" style="color:white;"></i>
-	  </a>
-	  <!-- Twitter -->
-      <a class=" m-1" href="https://twitter.com/EsraaSamkari" target="_blank">
-		<i class="fab fa-twitter" style="color:white;"></i>
-	  </a>
-	  <!-- itch io -->
-      <a class=" m-1" href="https://esgames.itch.io/" target="_blank">
-		<i class="fab fa-itch-io" style="color:white;"></i>
-	  </a>
+  <div class="footer-copyright text-center ">
+	© 2022-2023 ES, All Rights Reserved &nbsp; &nbsp; &nbsp; 
   </div>
-  
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
@@ -273,5 +282,20 @@
 		}
 	}
 </script>
+
+	<script>
+		window.onscroll = function() {myFunction()};
+		
+		var header = document.getElementById("myHeader");
+		var sticky = header.offsetTop;
+		
+		function myFunction() {
+		if (window.pageYOffset > sticky) {
+			header.classList.add("sticky");
+		} else {
+			header.classList.remove("sticky");
+		}
+		}
+	</script>
 </body>
 </html>

@@ -87,3 +87,14 @@ body:not(.cookieconsent) .cookie {
 .lang-btn:active{
 	background-color: #4CAF50;
 }
+
+.navbar {
+	background-color: rgb(33, 37, 41);
+	z-index: 100;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+  }
