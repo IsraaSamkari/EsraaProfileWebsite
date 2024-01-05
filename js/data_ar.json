@@ -53,6 +53,16 @@
 		"title": "المشاريع",
 		"MainDiv": [
 			{
+				"Header":"2023",
+				"Body":[
+					{
+						"item": "♦ نشر بحث.",
+						"link": "https://scholar.google.com/citations?hl=ar&user=87Rihi0AAAAJ"
+					},{
+						"item": "♦ تطوير ألعاب بـ RenPy (لم ينشر)."
+					}
+				]
+			},{
 				"Header":"2022",
 				"Body":[
 					{
@@ -149,7 +159,7 @@
 				"Body":[
 					{
 						"item": "الإلتزام بالوقت",
-						"stars": 4
+						"stars": 5
 					},{
 						"item": "التحدث",
 						"stars": 5
@@ -169,7 +179,7 @@
 						"stars": 5
 					},{
 						"item": "Unreal 4",
-						"stars": 3
+						"stars": 4
 					},{
 						"item": "Clip studio",
 						"stars": 5

@@ -53,6 +53,16 @@
 		"title": "PROJECTS",
 		"MainDiv": [
 			{
+				"Header":"2023",
+				"Body":[
+					{
+						"item": "♦ Publishing 1 research.",
+						"link": "https://scholar.google.com/citations?hl=ar&user=87Rihi0AAAAJ"
+					},{
+						"item": "♦ Developing several games using RenPy (not published)."
+					}
+				]
+			},{
 				"Header":"2022",
 				"Body":[
 					{
@@ -148,8 +158,8 @@
 				"Header":"Soft skills",
 				"Body":[
 					{
-						"item": "Time keeping",
-						"stars": 4
+						"item": "Time management",
+						"stars": 5
 					},{
 						"item": "Talking",
 						"stars": 5
@@ -169,7 +179,7 @@
 						"stars": 5
 					},{
 						"item": "Unreal 4",
-						"stars": 3
+						"stars": 4
 					},{
 						"item": "Clip studio",
 						"stars": 5
