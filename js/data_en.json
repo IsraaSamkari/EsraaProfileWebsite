@@ -28,6 +28,9 @@
 		"title": "EXPERIENCE",
 		"MainDiv": [
 			{
+				"Header":"Trainer - 2024",
+				"Body":"Teaching robotics projects (EV3 and Spike)"
+			},{
 				"Header":"Volunteer - 2023",
 				"Body":"An introduction course to web development at the College of Technology for Girls in Makkah & in the Youtube as member of Atta_sa."
 			},{
@@ -49,6 +52,17 @@
 		"title": "PROJECTS",
 		"MainDiv": [
 			{
+				"Header":"2024",
+				"Body":[
+					{
+						"item": "♦ Publishing 1 research.",
+						"link": "https://scholar.google.com/citations?hl=ar&user=87Rihi0AAAAJ"
+					},{
+						"item": "♦ Building 2 video games.",
+						"link": "https://esgames.itch.io/"
+					}
+				]
+			},{
 				"Header":"2023",
 				"Body":[
 					{
