@@ -65,14 +65,14 @@
 						"item": "♦ Building dashboard.",
 						"link": "https://drive.google.com/file/d/115l1R0MvAyMDggs1jR-pzW8bf3z4HI_9/view?usp=sharing"
 					},{
-						"item": "♦ Building a CTF website for beginners",
-						"link": "https://israasamkari.github.io/CTF/"
-					},{
 						"item": "♦ Developed a website using Canva to explain CS courses.",
 						"link": "https://esraasamkari.my.canva.site/computer"
 					},{
-						"item": "♦ Caesar encryption tool",
+						"item": "♦ Caesar encryption tool.",
 						"link": "other pages/caesar/index.html"
+					},{
+						"item": "♦ An Arabic tool for clustering images.",
+						"link": "https://huggingface.co/spaces/Esraa2023/unsupervised-image-clustering"
 					}
 				]
 			},{
@@ -84,6 +84,9 @@
 					},{
 						"item": "♦ Building 2 video games.",
 						"link": "https://esgames.itch.io/"
+					},{
+						"item": "♦ Building a CTF website for beginners.",
+						"link": "https://israasamkari.github.io/CTF/"
 					}
 				]
 			},{

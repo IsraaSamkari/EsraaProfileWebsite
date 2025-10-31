@@ -64,14 +64,14 @@
 						"item": "♦ بناء لوحة بيانات تفاعلية .",
 						"link": "https://drive.google.com/file/d/115l1R0MvAyMDggs1jR-pzW8bf3z4HI_9/view?usp=sharing"
 					},{
-						"item": "♦ بناء موقع التقط العلم للمبتدئين.",
-						"link": "https://israasamkari.github.io/CTF/"
-					},{
 						"item": "♦ بناء موقع بكانفا لشرح مواد الثانوي.",
 						"link": "https://esraasamkari.my.canva.site/computer"
 					},{
-						"item": "♦ اداة قيصر للتشفير",
+						"item": "♦ اداة قيصر للتشفير.",
 						"link": "other pages/caesar/index.html"
+					},{
+						"item": "♦ اداة عربية لتجميع الصور المتشابهه.",
+						"link": "https://huggingface.co/spaces/Esraa2023/unsupervised-image-clustering"
 					}
 				]
 			},{
@@ -83,6 +83,9 @@
 					},{
 						"item": "♦ تطوير لعبتين إلكترونيتين.",
 						"link": "https://esgames.itch.io/"
+					},{
+						"item": "♦ بناء موقع التقط العلم للمبتدئين.",
+						"link": "https://israasamkari.github.io/CTF/"
 					}
 				]
 			},{
