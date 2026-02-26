@@ -100,3 +100,135 @@ body:not(.cookieconsent) .cookie {
 	left: 0;
 	width: 100%;
   }
+
+
+.carousel-container {
+	max-width: 400px;
+	padding: 20px;
+}
+.carousel-item img {
+	height: 200px;
+	object-fit: cover;
+	width: 100%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 50%;
+	padding: 20px;
+}
+
+/* رف الكتب الرئيسي */
+.bookshelf {
+	margin-top: 7%;
+	height: 20%;
+}
+
+.bookshelf .row {
+	justify-content: center;
+	align-items: flex-end;
+	gap: 1.2rem 0.5rem;
+}
+
+/* كل كتاب عبارة عن عمود صغير */
+.book-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: auto;
+	flex: 0 0 auto;
+	transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+	filter: drop-shadow(4px 8px 12px rgba(0, 0, 0, 0.5));
+}
+
+/* شكل الكتاب (المستطيل) */
+.book-spine {
+	width: 50px;
+	height: 80px;
+	background: #c72a2a;  /* default, will be overridden by inline style */
+	border-radius: 6px 6px 2px 2px;
+	box-shadow: -3px 0 0 rgba(0,0,0,0.2), 0 8px 0 #3c2e1f, 0 12px 8px rgba(0,0,0,0.3);
+	border-right: 2px solid rgba(255,255,255,0.3);
+	border-left: 2px solid rgba(0,0,0,0.2);
+	cursor: pointer;
+	transition: all 0.2s;
+	position: relative;
+	background-size: cover;
+	background-blend-mode: overlay;
+}
+
+/* وهم الغلاف: خطوط عرضية */
+.book-spine::before {
+	content: "";
+	position: absolute;
+	top: 15%;
+	left: 10%;
+	width: 80%;
+	height: 4px;
+	background: rgba(255,215,0,0.6);
+	border-radius: 4px;
+	box-shadow: 0 12px 0 rgba(255,215,0,0.4), 0 24px 0 rgba(255,215,0,0.2);
+}
+
+/* عنوان مختصر على ظهر الكتاب */
+.book-label {
+	background: rgba(0,0,0,0.5);
+	color: white;
+	font-size: 0.7rem;
+	padding: 2px 6px;
+	border-radius: 12px;
+	white-space: nowrap;
+	max-width: 100px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 6px;
+	font-weight: bold;
+	backdrop-filter: blur(2px);
+	border: 1px solid #fff3;
+	margin-top: 20%;
+}
+
+/* الفقاعة المنبثقة (تظهر فوق الكتاب عند الهوفر) */
+.bubble-info {
+	background: #fff9e6;
+	color: #1e2b3a;
+	font-size: 0.85rem;
+	padding: 0.6rem 1.2rem;
+	border-radius: 50px 50px 50px 8px;
+	box-shadow: 0 10px 20px -5px black;
+	position: absolute;
+	bottom: 150px;  /* فوق الكتاب مباشرة */
+	left: 50%;
+	transform: translateX(-50%) scale(0.9);
+	white-space: nowrap;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.2s;
+	pointer-events: none;
+	z-index: 100;
+	border: 2px solid #ffb347;
+	font-weight: 600;
+}
+
+.bubble-info i {
+	margin-left: 6px;
+	color: #f5a623;
+}
+
+.book-column:hover .book-spine {
+	transform: translateY(-35px) rotate(1deg);
+	box-shadow: -3px 12px 15px rgba(0,0,0,0.6), 0 8px 0 #3c2e1f;
+}
+
+.book-column:hover .bubble-info {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(-50%) scale(1);
+	bottom: 170px;
+}
+
+/* وضع علامة على أن الكتاب نشط (تم الضغط) */
+.book-column.active-book .book-spine {
+	transform: translateY(-20px) scale(1.05);
+	box-shadow: 0 0 0 4px #ffd966, -3px 12px 15px #000;
+}
