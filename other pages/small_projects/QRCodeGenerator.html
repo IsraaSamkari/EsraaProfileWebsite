@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء QR code</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center vh-100">
+
+<div class="container" style="max-width: 420px;">
+    <div class="card shadow-sm border-0 p-4 bg-white text-center rounded-3">
+        
+        <h3 class="fw-bold text-dark mb-1"> إنشاء QR</h3>
+        <p class="text-muted small mb-4">إنشاء, نسخ, أو تنزيل QR كود</p>
+        
+        <div class="mb-3 text-end">
+            <label for="qr-data" class="form-label small fw-semibold text-secondary">الرابط</label>
+            <input type="text" class="form-control form-control-lg text-start" id="qr-data" value="" placeholder="e.g., https://google.com">
+        </div>
+        
+        <button class="btn btn-success btn-lg w-100 fw-bold mb-4 shadow-sm" onclick="generateQR()">إنشاء QR كود</button>
+        
+        <div class="d-flex justify-content-center align-items-center bg-light rounded p-3 mb-4 mx-auto border" style="width: 210px; min-height: 210px;">
+            <div id="qrcode"></div>
+        </div>
+        
+        <div class="row g-2">
+            <div class="col-6">
+                <button id="copy-btn" class="btn btn-outline-secondary w-100 fw-semibold shadow-sm" onclick="copyQR()">
+                    نسخ الصورة
+                </button>
+            </div>
+            <div class="col-6">
+                <button id="download-btn" class="btn btn-primary w-100 fw-semibold shadow-sm" onclick="downloadQR()">
+                    تنزيل الصورة
+                </button>
+            </div>
+        </div>
+        
+    </div>
+	
+	<div class="text-center mt-3" dir="ltr">
+        <p class="text-muted small">&copy; ES &middot; 2026</p>
+    </div>
+</div>
+
+<script>
+    function generateQR() {
+        const data = document.getElementById("qr-data").value.trim();
+        const qrContainer = document.getElementById("qrcode");
+        
+        if (!data) {
+            alert("رجاءا أكتب الرابط");
+            return;
+        }
+
+        // Clear previous QR code
+        qrContainer.innerHTML = "";
+
+        // Generate the new QR code
+        new QRCode(qrContainer, {
+            text: data,
+            width: 180,
+            height: 180,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+        
+        // Reset copy button text if it was changed previously
+        document.getElementById("copy-btn").innerText = "نسخ الصورة";
+    }
+
+    function downloadQR() {
+        const qrImg = document.querySelector("#qrcode img");
+        if (!qrImg) {
+            alert("Please generate a QR code first!");
+            return;
+        }
+
+        const downloadLink = document.createElement("a");
+        downloadLink.href = qrImg.src;
+        downloadLink.download = "qrcode.png";
+        
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    }
+
+    async function copyQR() {
+        const qrImg = document.querySelector("#qrcode img");
+        if (!qrImg) {
+            alert("رجاءا قم بضغط على زر الإنشاء أولا");
+            return;
+        }
+
+        try {
+            // Fetch the base64 source image data and convert it into a blob format
+            const response = await fetch(qrImg.src);
+            const blob = await response.blob();
+            
+            // Use the Clipboard API to write the blob data
+            await navigator.clipboard.write([
+                new ClipboardItem({
+                    [blob.type]: blob
+                })
+            ]);
+            
+            // Visual feedback on successful copy
+            const copyBtn = document.getElementById("copy-btn");
+            copyBtn.innerText = "تم النسخ! ✓";
+            setTimeout(() => {
+                copyBtn.innerText = "نسخ الصورة";
+            }, 2000);
+
+        } catch (err) {
+            console.error("Failed to copy image: ", err);
+            alert("يوجد خطأ في نسخ الصورة بصورة تلقائية، جرب طريقة اخرى.");
+        }
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

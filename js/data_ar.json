@@ -58,6 +58,15 @@
 		"title": "المشاريع",
 		"MainDiv": [
 			{
+				"Header":"2026",
+				"Body":[
+					{
+						"item": "♦ بناء صفحة بسيطة لإنشاء كود QR",
+						"link": "other pages/small_projects/QRCodeGenerator.html"
+					}
+				]
+			},
+			{
 				"Header":"2025",
 				"Body":[
 					{
