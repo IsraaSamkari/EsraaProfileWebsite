@@ -63,6 +63,9 @@
 					{
 						"item": "♦ بناء صفحة بسيطة لإنشاء كود QR",
 						"link": "other pages/small_projects/QRCodeGenerator.html"
+					}, {
+						"item": "♦  بناء 4 تطبيقات تعليمية على الأندرويد",
+						"link": "other pages/small_projects/Android_apps/MyAndroidApps.html"
 					}
 				]
 			},

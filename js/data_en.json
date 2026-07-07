@@ -28,15 +28,6 @@
 		"title": "EXPERIENCE",
 		"MainDiv": [
 			{
-				"Header":"2026",
-				"Body":[
-					{
-						"item": "♦ Create a static QR code web page.",
-						"link": "other pages/small_projects/QRCodeGenerator.html"
-					}
-				]
-			},
-			{
 				"Header": "AI Trainer - 2025",
 				"Body": "Conducting workshops and courses within the school, as well as supervising AI competitions."
 			},
@@ -68,6 +59,17 @@
 		"title": "PROJECTS",
 		"MainDiv": [
 			{
+				"Header":"2026",
+				"Body":[
+					{
+						"item": "♦ Create a static QR code web page.",
+						"link": "other pages/small_projects/QRCodeGenerator.html"
+					}, {
+						"item": "♦ Build 4 Android applicaitons",
+						"link": "other pages/small_projects/Android_apps/MyAndroidApps.html"
+					}
+				]
+			},{
 				"Header":"2025",
 				"Body":[
 					{
