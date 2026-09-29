@@ -28,11 +28,19 @@
 		"title": "EXPERIENCE",
 		"MainDiv": [
 			{
+				"Header": "3D Design and Printing Trainer - 2026",
+				"Body": "Supervising student training on the fundamentals of 3D design and 3D printing."
+			},
+			{
+				"Header": "Cybersecurity Trainer - 2026",
+				"Body": "Supervising student training on cybersecurity topics."
+			},
+			{
 				"Header": "AI Trainer - 2025",
 				"Body": "Conducting workshops and courses within the school, as well as supervising AI competitions."
 			},
 			{
-				"Header": "Teacher - 2024 & 2025",
+				"Header": "Teacher - 2024 to present",
 				"Body": "Teaching specialized subjects in the Computer Science for high school students at Al-Fatah Private School, Makkah."
 			},{
 				"Header":"Trainer - 2024",
@@ -156,7 +164,7 @@
 				"Header":"2019",
 				"Body":[
 					{
-						"item": "♦ Building Textlexai app (under fixing).",
+						"item": "♦ Building Textlexai app.",
 						"link": ""
 					},{
 						"item": "♦ Writing a book Blender 2.80.",
@@ -170,7 +178,7 @@
 				"Header":"2018",
 				"Body":[
 					{
-						"item": "♦ Building Guide Me website (under fixing).",
+						"item": "♦ Building Guide Me website.",
 						"link": ""
 					},{
 						"item": "♦ Writing a book Blender 2.79.",
